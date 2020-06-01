@@ -4,7 +4,7 @@ import java.util.function.Predicate;
 
 public interface ICrud<T>{
 	
-	public void create();
+	public void create(T entity);
 	
 	public void update(T entity);
 	
