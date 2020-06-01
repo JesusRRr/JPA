@@ -4,15 +4,16 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
+import com.jpa.dao.ConnectionDB;
 import com.jpa.model.Person;
 
 public class Demo {
 
 	public static void main(String[] args) {
-		EntityManagerFactory emf= Persistence.createEntityManagerFactory("JPA");
-		EntityManager em=emf.createEntityManager();
+		EntityManager em = ConnectionDB.getEntityManager();
 		
 		Person person = new Person();
+		/*
 		person.setId(2);
 		person.setName("Jesus");
 		person.setLastName("R");
@@ -21,7 +22,7 @@ public class Demo {
 		em.persist(person);
 		em.getTransaction().commit();
 		em.close();
-		
+		*/
 		
 	}
 	
